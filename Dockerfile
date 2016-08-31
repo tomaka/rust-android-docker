@@ -5,9 +5,9 @@ RUN apt-get install -yq sudo curl wget git file g++ cmake pkg-config \
                         libasound2-dev bison flex mingw-w64 unzip ant openjdk-8-jdk
 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
-ENV PATH ~/.cargo/bin:$PATH
-RUN rustup default nightly
-RUN rustup target add arm-linux-androideabi
+ENV PATH /root/.cargo/bin:$PATH
+RUN /root/.cargo/bin/rustup default nightly
+RUN /root/.cargo/bin/rustup target add arm-linux-androideabi
 RUN cargo install cargo-apk
 
 RUN curl -L https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz | tar xz -C /usr/local
