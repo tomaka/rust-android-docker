@@ -15,7 +15,7 @@ RUN cd /usr/local && \
     wget -q https://dl.google.com/android/android-sdk_r24.4.1-linux.tgz && \
     tar -xzf android-sdk_r24.4.1-linux.tgz && \
     rm android-sdk_r24.4.1-linux.tgz
-RUN echo y | ${ANDROID_HOME}/tools/android update sdk --no-ui --all --filter platform-tools,android-18
+RUN echo y | ${ANDROID_HOME}/tools/android update sdk --no-ui --all --filter platform-tools,android-18,build-tools-23.0.3
 ENV PATH $PATH:${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools
 
 RUN cd /usr/local && \
