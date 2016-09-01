@@ -19,8 +19,8 @@ RUN echo y | ${ANDROID_HOME}/tools/android update sdk --no-ui --all --filter pla
 ENV PATH $PATH:${ANDROID_HOME}/tools:$ANDROID_HOME/platform-tools
 
 RUN cd /usr/local && \
-    wget -q http://dl.google.com/android/repository/android-ndk-r12-linux-x86_64.zip && \
-    unzip -q android-ndk-r12-linux-x86_64.zip && \
-    rm android-ndk-r12-linux-x86_64.zip
+    wget -q http://dl.google.com/android/repository/android-ndk-r12b-linux-x86_64.zip && \
+    unzip -q android-ndk-r12b-linux-x86_64.zip && \
+    rm android-ndk-r12b-linux-x86_64.zip
 
 ENV NDK_HOME /usr/local/android-ndk-r12b
