@@ -2,7 +2,7 @@ FROM ubuntu:xenial
 
 RUN apt-get update
 RUN apt-get install -yq sudo curl wget git file g++ cmake pkg-config \
-                        libasound2-dev bison flex mingw-w64 unzip ant openjdk-8-jdk \
+                        libasound2-dev bison flex unzip ant openjdk-8-jdk \
                         lib32stdc++6 lib32z1
 
 RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
